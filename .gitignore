@@ -1,0 +1,6 @@
+config.inc.php
+*.ini
+*.log
+*.lock
+.c9/
+docs/
