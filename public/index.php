@@ -1,4 +1,13 @@
-<?php require(__DIR__ . '/../include/layouts/head.inc'); ?>
+<?php
+require(__DIR__ . '/../include/layouts/head.inc');
+
+use TicketApp\DBHelper;
+
+$db = new DBHelper;
+
+$db->query('SELECT * FROM tickets WHERE')
+
+?>
 <div class="row">
     <p></p>
     <h1>Whelp</h1>
