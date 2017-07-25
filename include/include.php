@@ -19,6 +19,8 @@
 
 namespace TicketApp;
 
+use PDO;
+
 // Define DB config
 define("DB_HOST", "localhost");
 define("DB_USER", "TicketApp");
