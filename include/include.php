@@ -18,7 +18,13 @@
  */
 
 namespace TicketApp;
- 
+
+// Define DB config
+define("DB_HOST", "localhost");
+define("DB_USER", "username");
+define("DB_PASS", "password");
+define("DB_NAME", "database");
+
 Class GenericHelper
 {
     /**
@@ -34,5 +40,9 @@ Class GenericHelper
          $pageTitle = pathinfo($safeFile, PATHINFO_FILENAME);
          return ucfirst($pageTitle);
      }
+}
+class DBHelper {
+    // Define configuration
+
 }
 ?>
