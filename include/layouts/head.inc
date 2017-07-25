@@ -14,7 +14,7 @@
    require(__DIR__ . '/../autoload.php');
    
   /**
-   * Initialize new GenericHelper class, as the chopExt() function is used
+   * Initialize the GenericHelper class, as the chopExt() function is used
    * in the <title> tag. This also gives all pages access to the class.
    * 
    * @see GenericHelper::chopExt($file)
