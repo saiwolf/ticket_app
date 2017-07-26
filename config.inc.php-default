@@ -1,0 +1,9 @@
+<?php
+
+// Define DB config
+define("DB_HOST", "YourDBHost");
+define("DB_USER", "YourDBUser");
+define("DB_PASS", "YourDBPassword");
+define("DB_NAME", "YourDBName");
+
+?>

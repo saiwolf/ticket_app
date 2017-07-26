@@ -19,11 +19,7 @@ namespace TicketApp;
 use PDO;
 use DateTime;
 
-// Define DB config
-define("DB_HOST", "localhost");
-define("DB_USER", "TicketApp");
-define("DB_PASS", "vZvFqpLxc5dEq749");
-define("DB_NAME", "TicketApp");
+require(__DIR__ . '/../config.inc.php');
 
 
 /**
