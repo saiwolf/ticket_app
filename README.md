@@ -1,30 +1,24 @@
+     _____  _    _ ___  ___ _   _  _   _  _  _   _  _____  _____ 
+    /  ___|| |  | ||  \/  || \ | || | | || || \ | ||  ___||_   _|
+    \ `--. | |  | || .  . ||  \| || | | || ||  \| || |__    | |  
+     `--. \| |/\| || |\/| || . ` || | | || || . ` ||  __|   | |  
+    /\__/ /\  /\  /| |  | || |\  || |_| || || |\  || |___   | |  
+    \____/  \/  \/ \_|  |_/\_| \_/ \___/ | |\_| \_/\____/   \_/  
+                                         | |                     
+                                         |_|                     
+    -------------------------------------------------------------
+    
+# Just a silly little PHP Site
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+Author: [Robert Cato <saiwolf@swmnu.net\>](mailto:saiwolf@swmnu.net)
 
+This is just me putzing around with PHP. Some code might not be pretty, some of it might be downright horrifying, but that's the fun of learning right?
 
-Hi there! Welcome to Cloud9 IDE!
+ 
 
-To get you started, we have created a small hello world application.
+## Stuff used to make this site:
 
-1) Open the hello-world.php file
-
-2) Follow the run instructions in the file's comments
-
-3) If you want to look at the Apache logs, check out ~/lib/apache2/log
-
-And that's all there is to it! Just have fun. Go ahead and edit the code, 
-or add new files. It's all up to you! 
-
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+* [PHP 7.1](http://php.net/ChangeLog-7.php)
+* [Bootstrap 3.3.7](http://getbootstrap.com)
+* [Font Awesome CSS Icons](http://fontawesome.io/)
+* [jQuery v1.12.4](https://blog.jquery.com/2017/03/20/jquery-3-2-1-now-available/)
