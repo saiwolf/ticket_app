@@ -4,3 +4,4 @@ config.inc.php
 *.lock
 .c9/
 docs/
+php_errors*

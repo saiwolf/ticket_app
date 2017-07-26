@@ -64,13 +64,13 @@ $nameset = $db1->resultSet();
                               <a class="btn btn-danger"><em class="fa fa-trash"></em>
                             </td>
                             <td><?php echo $row['id']; ?></td>
-                            <td><?php echo $row['SubmittedOn']; ?></td>
+                            <td><?php echo $genericHelper->displayDate($row['SubmittedOn'], 'm/d/Y'); ?></td>
                             <td><?php echo $row['RequesterName']; ?></td>
                             <td><?php echo $row['Description']; ?></td>
                             <td><?php echo $row['department']; ?></td>
                             <td><?php echo $row['AssignedTo']; ?></td>
-                            <td>50</td>
-                            <td><?php echo $row['CompletedOn']; ?></td>
+                            <td><?php echo $genericHelper->daysOpen($row['SubmittedOn']); ?></td>
+                            <td><?php echo $genericHelper->displayDate($row['CompletedOn'], 'm/d/Y'); ?></td>
                           </tr>
                       <?php } ?>
                     </tbody>

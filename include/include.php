@@ -12,14 +12,12 @@
  * @license https://opensource.org/licenses/mit-license.php MIT
  * 
  */
-/**
- * Generic Helper Class
- * Misc. functions go here.
- */
+
 
 namespace TicketApp;
 
 use PDO;
+use DateTime;
 
 // Define DB config
 define("DB_HOST", "localhost");
@@ -27,9 +25,23 @@ define("DB_USER", "TicketApp");
 define("DB_PASS", "vZvFqpLxc5dEq749");
 define("DB_NAME", "TicketApp");
 
-Class GenericHelper
+
+/**
+ * Generic Helper Class
+ * Non-specific functions go here.
+ */
+ 
+class GenericHelper
 {
     /**
+     * Private variable declarations
+     * 
+     */
+     // private var = value;
+     
+    /**
+     * public function chopExt()
+     * 
      * Function to get the currently executing
      * script's filename and 'chop' off the path
      * and file extension.
@@ -42,17 +54,69 @@ Class GenericHelper
          $pageTitle = pathinfo($safeFile, PATHINFO_FILENAME);
          return ucfirst($pageTitle);
      }
+     
+     /**
+      * public function daysOpen()
+      * 
+      * Returns the difference between today's date
+      * and a date specified as a parameter using DateTime.
+      * 
+      * @param date $submittedOn The date the item was submitted on.
+      * @return int $interval-d The difference between now() and $submittedOn
+      */
+     public function daysOpen($submittedOn) {
+         $submitDate = new DateTime($submittedOn);
+         $today = new DateTime('now');
+         $interval = $today->diff($submitDate);
+         return $interval->d;
+     }
+     
+     /**
+      * public function displayDate()
+      * 
+      * Function to format dates dynamically with DateTime::format().
+      * 
+      * @param date $date The date to format. Should be in UNIX timestamp form.
+      * @param string $format A string containing the format for the date. Should
+      * adhere to what PHP's date() expects. (http://php.net/manual/en/function.date.php)
+      * 
+      * @return date $formatDate The date formatted as specified.
+      */
+     public function displayDate($date, $format) {
+         $formatDate = new DateTime($date);
+         return $formatDate->format($format);
+     }
 }
+
+/**
+ * DBHelper Class.
+ * FQN: TicketApp\DBHelper
+ * 
+ * Contains functions related to SQL operations.
+ */
 class DBHelper {
-    // Define configuration
-    private $host   = DB_HOST;
-    private $user   = DB_USER;
-    private $pass   = DB_PASS;
-    private $dbname = DB_NAME;
+    /**
+     * Private variable declarations
+     * 
+     */
+    private $host   = DB_HOST; //
+    private $user   = DB_USER; //
+    private $pass   = DB_PASS; // Look, ma, DB variables!
+    private $dbname = DB_NAME; //
     private $dbh;
     private $error;
     private $stmt;
     
+    /**
+     * public function __construct()
+     * 
+     * Constructor class for DBHelper. Automatically invoked 
+     * upon class instantation. Sets connection values and 
+     * attempts DB connection.
+     * 
+     * @param null Nothing
+     * @return PDO PDO connection object
+     */
     public function __construct() {
         // Set DSN
         $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
@@ -71,10 +135,32 @@ class DBHelper {
         }
     }
     
+    /**
+     * public function query()
+     * 
+     * Prepares a SQL statement for execution
+     * 
+     * @param string $query SQL Query
+     * @return string $stmt Properly Prepared SQL Query
+     */
     public function query($query) {
         $this->stmt = $this->dbh->prepare($query);
     }
     
+    
+    /**
+     * public function bind()
+     * 
+     * Binds values for use in prepared statements.
+     * For use with DBHelper::query()
+     * 
+     * @param string $param Name of param in SQL query
+     * @param string $value Value of $param
+     * @param PDO::PARAM $type PDO Param Type for explicit declaration.
+     * Defaults to PDO::PARAM_STR for 'VARCHAR'
+     * 
+     * @return string $stmt Fully prepared and bound SQL query.
+     */
     public function bind($param, $value, $type = null) {
         if (is_null($type)) {
             switch (true) {
