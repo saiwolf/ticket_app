@@ -21,4 +21,4 @@ This is just me putzing around with PHP. Some code might not be pretty, some of 
 * [PHP 7.1](http://php.net/ChangeLog-7.php)
 * [Bootstrap 3.3.7](http://getbootstrap.com)
 * [Font Awesome CSS Icons](http://fontawesome.io/)
-* [jQuery v1.12.4](https://blog.jquery.com/2017/03/20/jquery-3-2-1-now-available/)
+* [jQuery v3.2.1](https://blog.jquery.com/2017/03/20/jquery-3-2-1-now-available/)
