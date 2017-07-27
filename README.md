@@ -8,7 +8,7 @@
                                          |_|                     
     -------------------------------------------------------------
     
-# Just a silly little PHP Site
+# Just a silly little PHP Site.
 
 Author: [Robert Cato <saiwolf@swmnu.net\>](mailto:saiwolf@swmnu.net)
 
